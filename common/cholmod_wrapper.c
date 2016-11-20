@@ -64,8 +64,8 @@ int __dt_CHOLMOD_entry(cholmod_triplet *T, int i, int j, double x)
     /* append subscript */
     if (T->itype == CHOLMOD_LONG)
     {
-        ((UF_long*)T->i)[T->nnz] = i;
-        ((UF_long*)T->j)[T->nnz] = j;
+        ((SuiteSparse_long*)T->i)[T->nnz] = i;
+        ((SuiteSparse_long*)T->j)[T->nnz] = j;
     }
     else
     {
